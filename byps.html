@@ -9,52 +9,60 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     body, html {
       height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #fffbe6;
       overflow: hidden;
     }
 
-    .topbar {
-      width: 100%;
-      background: linear-gradient(90deg, #ffeb3b, #fff176);
-      padding: 1rem 2rem;
+    .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background-color: #fff44f;
+      padding: 1rem 2rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      border-radius: 0 0 10px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    .topbar h1 {
+    .navbar h1 {
+      color: #f1c40f;
       font-size: 1.8rem;
-      color: #fbc02d;
-      font-weight: bold;
-      text-shadow: 1px 1px 0 #fffde7;
+      letter-spacing: 1px;
+      animation: popIn 0.6s ease-in-out forwards;
     }
 
     .nav-links a {
-      margin-left: 1.5rem;
+      margin-left: 1rem;
       text-decoration: none;
-      color: #f57f17;
-      font-weight: 600;
+      color: #333;
+      background-color: #fdfd96;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
       transition: all 0.3s ease;
-      padding: 0.4rem 0.8rem;
-      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .nav-links a:hover {
-      background-color: #ffee58;
-      color: #000;
+      background-color: #fff200;
       transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
     }
 
     .content {
       position: absolute;
-      top: 72px;
+      top: 80px;
       left: 0;
       right: 0;
       bottom: 0;
@@ -69,14 +77,14 @@
   </style>
 </head>
 <body>
-  <div class="topbar">
+  <nav class="navbar">
     <h1>Lemon UBG</h1>
     <div class="nav-links">
-      <a href="/byps.html">now.gg</a>
-      <a href="/ezfn.html">easyfun</a>
-      <a href="/mc.html">minecraft</a>
+      <a href="/byps.html">Now.gg</a>
+      <a href="/ezfn.html">EasyFun</a>
+      <a href="/mc.html">Minecraft</a>
     </div>
-  </div>
+  </nav>
   <div class="content">
     <iframe src="/active/embed.html?url=https://now.gg" title="Now.gg"></iframe>
   </div>
